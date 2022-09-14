@@ -1,0 +1,423 @@
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    top: 0;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    /* background: linear-gradient(326deg, rgba(13, 194, 246, 1) 17%, rgba(13, 96, 246, 1) 29%, rgba(44, 13, 246, 1) 55%, rgba(104, 7, 249, 1) 82%); */
+    background: linear-gradient(326deg, rgba(6, 161, 205, 1) 17%, rgba(6, 55, 144, 1) 29%, rgba(18, 5, 103, 1) 55%, rgba(6, 1, 14, 1) 82%);
+}
+
+/* NavBar */
+
+.navbar {
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(326deg, rgba(6, 161, 205, 1) 17%, rgba(6, 55, 144, 1) 29%, rgba(18, 5, 103, 1) 55%, rgba(6, 1, 14, 1) 82%);
+    animation-name: fadeIn;
+    animation-duration: .7s;
+    z-index: 1;
+}
+
+
+
+.navbar-profile {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 4px 0;
+    color: white;
+    text-decoration: none;
+}
+
+.navbar-profile.active {
+    color: red;
+}
+
+.navbar-profile:focus {
+    color: red;
+    transition: all 1s ease-in
+}
+
+.navbar-profile:hover {
+    color: yellow;
+
+}
+
+
+
+.navbar-profile img {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    margin-left: 16px;
+
+}
+
+.navbar-profile figcaption {
+    font-size: 1.7rem;
+    font-weight: bold;
+
+}
+
+.navbar-content a.active {
+    color: red;
+}
+
+.navbar-content button {
+    height: 40px;
+    width: 40px;
+    margin-right: 16px;
+    display: flex;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 100%;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+}
+
+.navbar-content button img {
+    height: 20px;
+}
+
+.navbar-content a {
+    display: none;
+}
+
+.navbar-list {
+    background: linear-gradient(146deg, rgba(26, 23, 198, 1) 42%, rgba(154, 205, 200, 1) 98%);
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 88px;
+    display: grid;
+    padding: 8px;
+    animation-name: fadeIn;
+    animation-duration: 2s;
+
+}
+
+.navbar-list li {
+    list-style: none;
+    font-size: 1.5rem;
+}
+
+.navbar-list li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.navbar-list li a:hover {
+    color: white;
+}
+
+.navbar-list button {
+    border-radius: 100%;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    border: 0;
+    font-weight: bold;
+    background-color: black;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    color: white;
+}
+
+/* homepage */
+
+.homepage {
+
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 1.5rem;
+    min-height: calc(100vh - 80px);
+    gap: 20px;
+    justify-content: space-evenly;
+    margin-top: 80px;
+    padding-top: 32px;
+    animation-name: fadeIn;
+    animation-duration: 2s;
+
+}
+
+.homepage span {
+    display: block;
+    color: yellow;
+}
+
+.homepage h3 {
+    color: orange;
+}
+
+.homepage>section {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    max-width: 500px;
+    padding: 16px;
+
+}
+
+.homepage section ul {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding-left: 24px;
+    color: white;
+}
+
+.homepage h1 {
+    font-size: 2.4rem;
+    color: red;
+}
+
+.homepage p {
+    color: white;
+}
+
+.homepage-jobs>section {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.homepage-general>section {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+
+/* Portfolio page */
+
+.portfolio-page {
+    display: flex;
+    justify-content: center;
+    padding: 32px;
+    flex-wrap: wrap;
+    gap: 16px;
+    min-height: calc(100vh - 80px);
+    margin-top: 80px;
+    animation-name: fadeIn;
+    animation-duration: 2s;
+}
+
+.portfolio-page-project {
+    display: grid;
+    justify-items: center;
+    text-decoration: none;
+    color: black;
+    gap: 4px;
+    /* border: 3px inset red; */
+    padding: 8px;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 16px;
+}
+
+.portfolio-page-project:hover {
+    border: 3px inset yellow;
+    transition: all .2s ease-in;
+}
+
+.portfolio-page-project:focus {
+    border: 3px inset red;
+    transition: all .2s ease-in-out;
+}
+
+.portfolio-page-project h3 {
+    font-size: 2rem;
+    color: orange;
+}
+
+.portfolio-page-project img {
+    width: 100%;
+    border-radius: 16px;
+}
+
+.portfolio-page-project p {
+    font-size: 1.5rem;
+    text-align: center;
+    color: white;
+}
+
+/* Certificate page */
+
+.certificate-page {
+    padding: 32px;
+    min-height: calc(100vh - 80px);
+    margin-top: 80px;
+    animation-name: fadeIn;
+    animation-duration: 2s;
+}
+
+.certificate-page h1 {
+    color: red;
+    text-align: center;
+    margin-bottom: 8px;
+    font-size: 2.5rem;
+}
+
+.certificate-page p {
+    font-size: 1.7rem;
+    margin-bottom: 16px;
+    text-align: center;
+    color: white;
+}
+
+.certificate-page h2 {
+    font-size: 1.9rem;
+    color: orange;
+    text-align: center;
+    margin-bottom: 16PX;
+}
+
+.certificate-page-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 16px;
+}
+
+.certificate-page section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.certificate-page section h3 {
+    font-size: 1.7rem;
+    color: yellow;
+}
+
+.certificate-page section a {
+    width: 100%;
+}
+
+.certificate-page section a:hover {
+    transform: scale(1.1);
+    transition: .3s ease-in-out;
+}
+
+.certificate-page section button {
+    min-height: 40px;
+    width: 100%;
+    border-radius: 20px;
+    font-size: 1.7rem;
+    cursor: pointer;
+}
+
+/* footer */
+
+.footer-component {
+    display: flex;
+    font-size: 1.7rem;
+    width: 100%;
+    justify-content: space-between;
+    background: radial-gradient(circle, rgba(170, 221, 216, 1) 0%, rgba(134, 173, 196, 1) 86%);
+    height: 40px;
+    align-items: center;
+    padding: 12px;
+
+}
+
+.footer-component a {
+    text-decoration: none;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    color: black;
+}
+
+.footer-component a:hover span {
+    color: red;
+}
+
+.footer-component a span {
+    display: none;
+}
+
+
+
+.footer-component figure {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.footer-component img {
+    height: 28px;
+}
+
+/* media queries */
+@media (min-width: 460px) {
+    .footer-component a span {
+        display: inherit;
+    }
+}
+
+@media (min-width: 600px) {
+
+    /* navBar */
+    .navbar-content {
+        display: flex;
+        gap: 40px;
+    }
+
+    .navbar-content a:nth-child(3) {
+        margin-right: 36px;
+    }
+
+    .navbar-content button {
+        display: none;
+    }
+
+    .navbar-content a {
+        display: inline-block;
+        text-decoration: none;
+        color: black;
+        font-size: 1.7rem;
+        font-weight: bold;
+    }
+
+    .navbar-content a:focus {
+        color: red;
+        transition: all 1s ease-in;
+    }
+
+    .navbar-content a:hover {
+        color: yellow;
+    }
+
+}

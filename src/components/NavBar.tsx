@@ -17,7 +17,7 @@ export const NavBar = () => {
 
     return (
         <header className='navbar'>
-            <Link onClick={() => dispatch(onActiveHome())} to="/home" className={`navbar-profile ${isHomeActive && "active"}`}>
+            <Link onClick={() => dispatch(onActiveHome())} to="/homePage" className={`navbar-profile ${isHomeActive && "active"}`}>
                 <img src="/images/profile.jpg" alt="image jean zapata" />
                 <figcaption>Jean Zapata</figcaption>
             </Link>
@@ -26,8 +26,8 @@ export const NavBar = () => {
                 !isListOpen && (
                     <div className='navbar-content'>
                         <button onClick={() => dispatch(onOpenList())}  ><img src="https://cdn-icons-png.flaticon.com/128/3917/3917215.png" alt="more information" /></button>
-                        <Link onClick={() => dispatch(onActiveProject())} className={`${isProjectActive ? "active" : ""}`} to="/projects">Projects</Link>
-                        <Link onClick={() => dispatch(onActiveCertificate())} className={`${isCertificateActive ? "active" : ""}`} to="/certificates">Certificates</Link>
+                        <Link onClick={() => dispatch(onActiveProject())} className={`${isProjectActive ? "active" : ""}`} to="/projectsPage">Projects</Link>
+                        <Link onClick={() => dispatch(onActiveCertificate())} className={`${isCertificateActive ? "active" : ""}`} to="/certificatesPage">Certificates</Link>
                     </div>
                 )
             }
@@ -36,8 +36,8 @@ export const NavBar = () => {
             {
                 isListOpen && (
                     <ul className='navbar-list'>
-                        <li><Link onClick={() => dispatch(onActiveProject())} to="/projects">Projects</Link></li>
-                        <li><Link onClick={() => dispatch(onActiveCertificate())} to="/certificates">Certificates</Link></li>
+                        <li><Link onClick={() => dispatch(onActiveProject())} to="/projectsPage">Projects</Link></li>
+                        <li><Link onClick={() => dispatch(onActiveCertificate())} to="/certificatesPage">Certificates</Link></li>
                         <button onClick={() => dispatch(onCloseList())} >x</button>
                     </ul>
                 )

@@ -7,11 +7,11 @@ export const AppRouter = () => {
     return (
 
         <Routes>
-            <Route path="/home" element={<HomePage />} />
-            <Route path="/projects" element={<PortfolioPage />} />
-            <Route path="/certificates" element={<CertificatesPage />} />
+            <Route path="/homePage" element={<HomePage />} />
+            <Route path="/projectsPage" element={<PortfolioPage />} />
+            <Route path="/certificatesPage" element={<CertificatesPage />} />
 
-            <Route path="/*" element={<Navigate to="/home" />} />
+            <Route path="/*" element={<Navigate to="/homePage" />} />
 
         </Routes>
     )
